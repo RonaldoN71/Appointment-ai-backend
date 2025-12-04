@@ -11,7 +11,7 @@ const WEEKDAYS = {
   sunday: 0
 };
 
-function parseDatePhrase(phrase, tz = "Asia/Kolkata") {
+function parseDatePhrase(phrase, tz = process.env.TZ || "Asia/Kolkata") {
   if (!phrase) return null;
 
   const lower = phrase.toLowerCase().trim();
@@ -47,7 +47,7 @@ function parseDatePhrase(phrase, tz = "Asia/Kolkata") {
   return date.format("YYYY-MM-DD");
 }
 
-function parseTimePhrase(phrase, tz = "Asia/Kolkata") {
+function parseTimePhrase(phrase, tz = process.env.TZ || "Asia/Kolkata") {
   if (!phrase) return null;
 
   const lower = phrase.toLowerCase().trim();

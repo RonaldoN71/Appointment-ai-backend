@@ -1,6 +1,6 @@
 const { parseDatePhrase, parseTimePhrase } = require("../utils/dateUtils");
 
-const DEFAULT_TZ = "Asia/Kolkata";
+const DEFAULT_TZ = process.env.TZ || "Asia/Kolkata";
 
 exports.normalizeEntities = (entities) => {
   const tz = DEFAULT_TZ;

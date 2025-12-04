@@ -20,7 +20,10 @@ npm install
 2. Create a `.env` file in the root directory and add:
 ```env
 PORT=3000
+TZ=Asia/Kolkata
 ```
+
+**Note:** `TZ` is optional. If not provided, it defaults to `Asia/Kolkata`.
 
 3. Run the server:
 ```bash
